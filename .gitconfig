@@ -1,0 +1,31 @@
+[alias]
+   ci = commit
+   lc = log ORIG_HEAD.. --stat --no-merges
+   graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+   st = status
+   br = branch
+   co = checkout
+   di = diff
+   wdi = diff --color-words
+   lg = log -p
+   all = submodule foreach git
+   ff = flow feature
+[merge]
+	tool = kdiff3
+[user]
+	name = Kevin van der Velden
+	email = kevin.vdvelden@gmail.com
+[core]
+	editor = vim
+	autocrlf = false
+    excludesfile = ~/.gitignore_global
+[mergetool "kdiff3"]
+	path = ping
+[diff]
+	guitool = kdiff3
+[color]
+	branch = always
+	diff = auto
+	status = always
+[push]
+	default = simple
