@@ -5,4 +5,4 @@ alias grep='grep --color'                     # show differences in colour
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 alias install='sudo apt-get install'
-
+alias search='apt-cache search'
